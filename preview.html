@@ -1839,17 +1839,11 @@ buildEditor = function(){
 };
 
 // ── BOOT ──────────────────────────────────────────────────────────────────────
-var _chartCheckInterval = setInterval(function(){
-  if(typeof Chart !== 'undefined'){
-    clearInterval(_chartCheckInterval);
-    // Load from localStorage first
-    lsLoad();
-    updateMonthLabel();
-    buildEditor();
-    renderAll();
-    loadInitialFromFirebase();
-  }
-}, 50);
+// Preview: renderiza os componentes mesmo se o visualizador bloquear o Chart.js.
+lsLoad();
+updateMonthLabel();
+buildEditor();
+renderAll();
 
 })();
 </script>
