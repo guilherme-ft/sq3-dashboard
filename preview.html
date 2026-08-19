@@ -426,29 +426,11 @@ table.zt tr.tot td{border-top:1px solid rgba(0,240,250,.2);}
 
 </div>
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-  import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-  const firebaseConfig = {
-    apiKey: "AIzaSyA3_Oe3wSEs8XJDbDor0EgLVAzIywbxnno",
-    authDomain: "sq3-resultados.firebaseapp.com",
-    projectId: "sq3-resultados",
-    storageBucket: "sq3-resultados.firebasestorage.app",
-    messagingSenderId: "266392706540",
-    appId: "1:266392706540:web:a30a4d06713deca68574c9"
-  };
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  window._fbSave = async function(month, execs, data) {
-    try { await setDoc(doc(db,"sq3_kpi_mensal",month),{month,execs,data,updated_at:new Date().toISOString()}); return true; }
-    catch(e) { console.error(e); return false; }
-  };
-  window._fbLoad = async function(month) {
-    try { const snap = await getDoc(doc(db,"sq3_kpi_mensal",month)); return snap.exists()?snap.data():null; }
-    catch(e) { console.error(e); return null; }
-  };
+<script>
+  // Preview isolada: nunca lê nem grava no Firebase.
+  window._fbSave = async function(){ return false; };
+  window._fbLoad = async function(){ return null; };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 (function(){
 
@@ -1856,17 +1838,11 @@ buildEditor = function(){
 };
 
 // ── BOOT ──────────────────────────────────────────────────────────────────────
-var _chartCheckInterval = setInterval(function(){
-  if(typeof Chart !== 'undefined'){
-    clearInterval(_chartCheckInterval);
-    // Load from localStorage first
-    lsLoad();
-    updateMonthLabel();
-    buildEditor();
-    renderAll();
-    loadInitialFromFirebase();
-  }
-}, 50);
+// Preview: renderiza os componentes mesmo se o visualizador bloquear o Chart.js.
+lsLoad();
+updateMonthLabel();
+buildEditor();
+renderAll();
 
 })();
 </script>
