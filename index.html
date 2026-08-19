@@ -15,9 +15,9 @@
   --Gbd:rgba(0,229,160,0.35);--Ybd:rgba(255,214,0,0.35);--Rbd:rgba(255,77,77,0.35);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:#0a1828;font-family:'Lato',sans-serif;color:var(--w);min-height:100vh;}
-#db{background:var(--royal);min-height:100vh;}
-.hdr{background:var(--deep);padding:13px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,240,250,0.2);}
+body{background:#00145F;font-family:'Lato',sans-serif;color:var(--w);min-height:100vh;}
+#db{background:radial-gradient(circle at 92% 8%,rgba(0,240,250,.16) 0 72px,transparent 73px),radial-gradient(circle at 4% 92%,rgba(155,250,255,.10) 0 120px,transparent 121px),linear-gradient(145deg,#0050C3 0%,#0048B4 55%,#002D8C 100%);min-height:100vh;}
+.hdr{background:rgba(0,20,95,.96);padding:13px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,240,250,0.28);box-shadow:0 8px 30px rgba(0,20,95,.22);}
 .tg{font-size:9px;color:var(--cyan);letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-top:2px;}
 .hb{background:var(--cyan);color:var(--deep);font-size:10px;font-weight:900;padding:4px 12px;border-radius:20px;display:inline-block;margin-top:4px;}
 .tabs{display:flex;background:var(--deep);border-bottom:1px solid rgba(0,240,250,0.12);padding:0 24px;overflow-x:auto;}
@@ -26,7 +26,7 @@ body{background:#0a1828;font-family:'Lato',sans-serif;color:var(--w);min-height:
 .tab.active{color:var(--cyan);border-bottom-color:var(--cyan);}
 .tc{display:none;padding:18px 24px 30px;}
 .tc.active{display:block;}
-.panel{background:var(--card);border:1px solid var(--bord);border-radius:10px;padding:15px;margin-bottom:14px;}
+.panel{background:linear-gradient(145deg,rgba(0,20,95,.66),rgba(0,45,140,.52));border:1px solid rgba(155,250,255,.18);border-radius:14px;padding:16px;margin-bottom:14px;box-shadow:0 8px 28px rgba(0,20,95,.14);}
 .panel:last-child{margin-bottom:0;}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
@@ -36,7 +36,7 @@ body{background:#0a1828;font-family:'Lato',sans-serif;color:var(--w);min-height:
 .li{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--mu);}
 .ld{width:8px;height:8px;border-radius:2px;}
 .krow{display:grid;gap:12px;margin-bottom:16px;}
-.kcard{border-radius:10px;padding:14px;border:2px solid;position:relative;overflow:hidden;}
+.kcard{border-radius:14px;padding:15px;border:1px solid;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(0,20,95,.12);}
 .kcard::before{content:'';position:absolute;top:-16px;right:-16px;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,0.04);}
 .klbl{font-size:10px;letter-spacing:.9px;text-transform:uppercase;font-weight:700;margin-bottom:4px;}
 .kval{font-size:28px;font-weight:900;line-height:1;}
@@ -309,9 +309,9 @@ table.zt tr.tot td{border-top:1px solid rgba(0,240,250,.2);}
       <div id="msg_final_db" style="font-size:12px;color:var(--so);line-height:1.7;max-width:600px;margin:0 auto;"></div>
       <div style="font-size:10px;color:var(--mu);margin-top:12px;">— Guilherme, coordenador Outbound SQ3</div>
     </div>
-    <div style="text-align:center;padding:28px 20px;background:linear-gradient(135deg,#FFD600,#FFA500);border-radius:16px;box-shadow:0 0 40px rgba(255,214,0,0.35);">
-      <div style="font-size:32px;font-weight:900;color:#00145F;letter-spacing:1px;text-transform:uppercase;line-height:1.2;">VAAAAAAMOOO PORRA<br>JULHO É NOSSO! 🔥🚀</div>
-      <div style="font-size:12px;color:#00145F;font-weight:700;margin-top:10px;">Bora bater meta de novo. Bora faturar mais. Bora juntos. 💪</div>
+    <div style="text-align:center;padding:26px 20px;background:linear-gradient(135deg,#00F0FA,#9BFAFF);border-radius:16px;box-shadow:0 0 34px rgba(0,240,250,0.22);">
+      <div style="font-size:27px;font-weight:900;color:#00145F;letter-spacing:.5px;line-height:1.2;">Performance que transforma resultado.</div>
+      <div style="font-size:12px;color:#002D8C;font-weight:700;margin-top:9px;">Clareza no funil, consistência na execução e foco no próximo passo.</div>
     </div>
   </div>
 
@@ -336,14 +336,14 @@ table.zt tr.tot td{border-top:1px solid rgba(0,240,250,.2);}
       <!-- COL 1 -->
       <div>
         <div class="panel">
-          <div class="stit">Metas do Coordenador</div>
-          <div style="margin-bottom:6px;"><span class="ef">Sua Meta MRR (Head)</span><input class="ei" type="number" id="e_coord_mrr" value="375000"></div>
-          <div><span class="ef">Sua Meta One-Shot (Head)</span><input class="ei" type="number" id="e_coord_os" value="500000"></div>
+          <div class="stit">Metas oficiais</div>
+          <div style="margin-bottom:6px;"><span class="ef">Meta MRR</span><input class="ei" type="number" id="e_coord_mrr" value="375000"></div>
+          <div><span class="ef">Meta One-Shot</span><input class="ei" type="number" id="e_coord_os" value="500000"></div>
         </div>
         <div class="panel">
-          <div class="stit">Metas Mensais do Time</div>
-          <div style="margin-bottom:6px;"><span class="ef">Meta MRR Total</span><input class="ei" type="number" id="e_mmrr" value="75000"></div>
-          <div style="margin-bottom:6px;"><span class="ef">Meta One-Shot Total</span><input class="ei" type="number" id="e_mos" value="100000"></div>
+          <div class="stit">Referências operacionais</div>
+          <div style="margin-bottom:6px;"><span class="ef">Referência MRR Backlog</span><input class="ei" type="number" id="e_mmrr" value="75000"></div>
+          <div style="margin-bottom:6px;"><span class="ef">Referência OS Backlog</span><input class="ei" type="number" id="e_mos" value="100000"></div>
           <div><span class="ef">Meta Implantações</span><input class="ei" type="number" id="e_mimpl" value="23"></div>
         </div>
         <div class="panel">
@@ -640,7 +640,7 @@ el('sem_btns').addEventListener('click',function(ev){
 
 // ── RENDER VISÃO GERAL ────────────────────────────────────────────────────────
 function renderExecutiveSummary(){
-  var mrr=sumObj(D.mrr),os=sumObj(D.os),metaM=sumObj(D.meta_mrr),metaO=sumObj(D.meta_os);
+  var mrr=sumObj(D.mrr),os=sumObj(D.os),metaM=Number(D.coord_mrr)||sumObj(D.meta_mrr),metaO=Number(D.coord_os)||sumObj(D.meta_os);
   var projM=EXECS.reduce(function(s,e){return s+fcProj(FC.mrr[e]);},0);
   var projO=EXECS.reduce(function(s,e){return s+fcProj(FC.os[e]);},0);
   var impl=EXECS.reduce(function(s,e){var x=D.impl[e]||{};return s+(x.i||0);},0);
@@ -728,15 +728,15 @@ function renderVisao(){
 function renderReceita(){
   var tM=EXECS.reduce(function(s,e){return s+D.mrr[e];},0);
   var tO=EXECS.reduce(function(s,e){return s+D.os[e];},0);
-  var metaTM=EXECS.reduce(function(s,e){return s+(D.meta_mrr[e]||0);},0);
-  var metaTO=EXECS.reduce(function(s,e){return s+(D.meta_os[e]||0);},0);
-  var pM=pct(tM,metaTM),pO=pct(tO,metaTO),pCM=pct(tM,D.coord_mrr),pCO=pct(tO,D.coord_os);
-  var dM=tM-metaTM,dO=tO-metaTO,dCM=tM-D.coord_mrr,dCO=tO-D.coord_os;
+  var metaM=Number(D.coord_mrr)||EXECS.reduce(function(s,e){return s+(D.meta_mrr[e]||0);},0);
+  var metaO=Number(D.coord_os)||EXECS.reduce(function(s,e){return s+(D.meta_os[e]||0);},0);
+  var pM=pct(tM,metaM),pO=pct(tO,metaO),gapM=Math.max(0,metaM-tM),gapO=Math.max(0,metaO-tO);
+  var fM=EXECS.reduce(function(s,e){return s+fcProj(FC.mrr[e]);},0),fO=EXECS.reduce(function(s,e){return s+fcProj(FC.os[e]);},0);
   set('mrow_receita',
-    '<div class="sc b'+clr(pM)+'" style="background:var(--'+clr(pM)+'bg);"><div class="sl t'+clr(pM)+'">MRR Realizado</div><div class="sv t'+clr(pM)+'">'+fmt(tM)+'</div><div class="sp t'+clr(pM)+'">'+pM+'% meta time '+emo(pM)+'</div><div style="font-size:9px;color:var(--mu);margin-top:3px;">'+pCM+'% meta coord '+emo(pCM)+'</div></div>'+
-    '<div class="sc" style="background:var(--card);border-color:var(--bord);"><div class="sl tC">Metas MRR</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px;"><div style="background:rgba(0,240,250,0.07);border-radius:7px;padding:8px;text-align:center;"><div style="font-size:8px;color:var(--cyan);text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:3px;">Time</div><div style="font-size:14px;font-weight:900;">'+fmt(metaTM)+'</div><div style="font-size:9px;color:'+(dM>=0?'var(--G)':'var(--R)')+';margin-top:2px;font-weight:700;">'+(dM>=0?'+':'')+fmt(dM)+'</div></div><div style="background:rgba(255,214,0,0.08);border-radius:7px;padding:8px;text-align:center;"><div style="font-size:8px;color:#FFD600;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:3px;">Coord.</div><div style="font-size:14px;font-weight:900;">'+fmt(D.coord_mrr)+'</div><div style="font-size:9px;color:'+(dCM>=0?'var(--G)':'var(--R)')+';margin-top:2px;font-weight:700;">'+(dCM>=0?'+':'')+fmt(dCM)+'</div></div></div></div>'+
-    '<div class="sc b'+clr(pO)+'" style="background:var(--'+clr(pO)+'bg);"><div class="sl t'+clr(pO)+'">One-Shot Realizado</div><div class="sv t'+clr(pO)+'">'+fmt(tO)+'</div><div class="sp t'+clr(pO)+'">'+pO+'% meta time '+emo(pO)+'</div><div style="font-size:9px;color:var(--mu);margin-top:3px;">'+pCO+'% meta coord '+emo(pCO)+'</div></div>'+
-    '<div class="sc" style="background:var(--card);border-color:var(--bord);"><div class="sl tC">Metas One-Shot</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px;"><div style="background:rgba(0,240,250,0.07);border-radius:7px;padding:8px;text-align:center;"><div style="font-size:8px;color:var(--cyan);text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:3px;">Time</div><div style="font-size:14px;font-weight:900;">'+fmt(metaTO)+'</div><div style="font-size:9px;color:'+(dO>=0?'var(--G)':'var(--R)')+';margin-top:2px;font-weight:700;">'+(dO>=0?'+':'')+fmt(dO)+'</div></div><div style="background:rgba(255,214,0,0.08);border-radius:7px;padding:8px;text-align:center;"><div style="font-size:8px;color:#FFD600;text-transform:uppercase;letter-spacing:.6px;font-weight:700;margin-bottom:3px;">Coord.</div><div style="font-size:14px;font-weight:900;">'+fmt(D.coord_os)+'</div><div style="font-size:9px;color:'+(dCO>=0?'var(--G)':'var(--R)')+';margin-top:2px;font-weight:700;">'+(dCO>=0?'+':'')+fmt(dCO)+'</div></div></div></div>'
+    '<div class="sc b'+clr(pM)+'" style="background:var(--'+clr(pM)+'bg);"><div class="sl t'+clr(pM)+'">MRR realizado</div><div class="sv t'+clr(pM)+'">'+fmt(tM)+'</div><div class="sp t'+clr(pM)+'">'+pM+'% da meta '+emo(pM)+'</div></div>'+
+    '<div class="sc" style="background:var(--card);border-color:var(--bord);"><div class="sl tC">MRR - meta e gap</div><div class="sv">'+fmt(metaM)+'</div><div class="sp '+(gapM?'tR':'tG')+'">'+(gapM?'Faltam '+fmt(gapM):'Meta atingida ✓')+'</div></div>'+
+    '<div class="sc b'+clr(pO)+'" style="background:var(--'+clr(pO)+'bg);"><div class="sl t'+clr(pO)+'">One-Shot realizado</div><div class="sv t'+clr(pO)+'">'+fmt(tO)+'</div><div class="sp t'+clr(pO)+'">'+pO+'% da meta '+emo(pO)+'</div></div>'+
+    '<div class="sc" style="background:var(--card);border-color:var(--bord);"><div class="sl tC">Forecast provável</div><div class="sv">'+fmt(tM+tO+fM+fO)+'</div><div class="sp tC">MRR '+fmt(tM+fM)+' · OS '+fmt(tO+fO)+'</div></div>'
   );
   set('vgrid_receita',EXECS.map(function(e){
     var mM2=D.meta_mrr[e]||1,mO2=D.meta_os[e]||1,pm=pct(D.mrr[e],mM2),po=pct(D.os[e],mO2);
