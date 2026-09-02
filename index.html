@@ -55,6 +55,7 @@
       <button class="nav-item" data-view="forecast"><span class="nav-icon">◇</span>3. Forecast</button>
       <button class="nav-item" data-view="operation"><span class="nav-icon">◎</span>4. Implantações & TPV</button>
       <button class="nav-item" data-view="actions"><span class="nav-icon">✓</span>5. Gaps & Plano de ação</button>
+      <button class="nav-item" data-view="backlog"><span class="nav-icon">▤</span>6. Backlog — Setembro</button>
       <button class="nav-item" data-view="history"><span class="nav-icon">↺</span>Histórico</button>
     </nav>
     <div class="nav-label">Gestão</div>
@@ -129,6 +130,8 @@
 
       <section class="view" id="actions"><div class="section-head" style="margin-top:0"><div><h2>Gaps e plano de ação</h2><p>Edite, inclua ou remova itens. Salve uma única vez ao finalizar.</p></div><button class="primary-btn" id="saveActions">Salvar gaps e plano</button></div><div class="grid action-grid" id="actionGrid"></div></section>
 
+      <section class="view" id="backlog"><div class="section-head" style="margin-top:0"><div><h2>Backlog — Setembro</h2><p>Visão de acompanhamento do mês. Esta aba é somente de consulta e não altera os dados do dashboard.</p></div><span class="badge">Setembro 2026</span></div><article class="card"><div class="section-head" style="margin:0 0 12px"><div><h2>Backlog comercial</h2><p>Casas e oportunidades pendentes para acompanhamento.</p></div></div><div class="action-empty"><strong>Backlog ainda não informado</strong>Esta área foi criada separadamente para apresentar o backlog de setembro, sem interferir nos dados já salvos.</div></article></section>
+
       <section class="view" id="history">
         <div class="section-head" style="margin-top:0"><div><h2>Histórico e comparativos</h2><p>Semana atual x anterior, mês atual x anterior e evolução acumulada</p></div><span class="badge">Base histórica</span></div>
         <div class="grid history-grid"><article class="card compare-card"><div class="compare-label">Reuniões - semana atual</div><div class="compare-value">18</div><div class="delta">↑ 12,5% vs semana anterior</div></article><article class="card compare-card"><div class="compare-label">Propostas - semana atual</div><div class="compare-value">16</div><div class="delta">↑ 23,1% vs semana anterior</div></article><article class="card compare-card"><div class="compare-label">Receita - mês atual</div><div class="compare-value">R$ 205,9k</div><div class="delta">↑ 8,7% vs mês anterior</div></article><article class="card compare-card"><div class="compare-label">Conversão proposta → contrato</div><div class="compare-value">31%</div><div class="delta down">↓ 4 p.p. vs mês anterior</div></article></div>
@@ -158,7 +161,7 @@
   window._fbSave=async(month,execs,data)=>{try{await setDoc(doc(firebaseDb,"sq3_kpi_mensal",month),{month,execs,data,updated_at:new Date().toISOString()});return true}catch(error){console.error(error);return false}};
 </script>
 <script>
-  const labels={overview:'Resumo executivo',funnel:'1. Funil comercial',revenue:'2. Receita',forecast:'3. Forecast',operation:'4. Implantações & TPV',actions:'5. Gaps & Plano de ação',history:'Histórico',editor:'Editor de dados'};
+  const labels={overview:'Resumo executivo',funnel:'1. Funil comercial',revenue:'2. Receita',forecast:'3. Forecast',operation:'4. Implantações & TPV',actions:'5. Gaps & Plano de ação',backlog:'6. Backlog — Setembro',history:'Histórico',editor:'Editor de dados'};
   const levelGoals={1:{mrr:3000,os:4000},2:{mrr:5000,os:8000},3:{mrr:8500,os:12500},4:{mrr:10000,os:15000},5:{mrr:15000,os:20000}};
   const wk=(ag,re,pr,fo,co)=>({ag,re,pr,fo,co});
   const executives=[
